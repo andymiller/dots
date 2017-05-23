@@ -237,6 +237,34 @@ autocmd FileType python map <LocalLeader>, :call PrintVar()<CR>
 "===================================================================
 
 
+"============ Julia commands using tmux ================================
+" ervandew/screen configuration to send commands to julia repl
+
+let g:ScreenImpl = "Tmux"
+
+" Open an ipython3 shell.
+autocmd FileType julia map <LocalLeader>p :ScreenShell! julia<CR>
+
+" Open an ipython2 shell.
+autocmd FileType julia map <LocalLeader>pp :ScreenShell! julia<CR>
+
+" Close whichever shell is running.
+autocmd FileType julia map <LocalLeader>q :ScreenQuit<CR>
+
+" Send current line to python and move to next line.
+autocmd FileType julia map <LocalLeader>r V:ScreenSend<CR>j
+autocmd FileType julia map <Space> V:ScreenSend<CR>j
+
+" Send visual selection to python and move to next line.
+autocmd FileType julia map <LocalLeader>v :ScreenSend<CR>`>0j
+autocmd FileType julia map <LocalLeader><Space> :ScreenSend<CR>`>0j
+
+" Send a carriage return line to python.
+autocmd FileType julia map <LocalLeader>a :call g:ScreenShellSend("\r")<CR>
+
+"===================================================================
+
+
 
 
 
