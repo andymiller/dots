@@ -265,8 +265,6 @@ autocmd FileType julia map <LocalLeader>a :call g:ScreenShellSend("\r")<CR>
 "===================================================================
 
 
-
-
-
-
+"========= AIRLINE theme  =========
+:let g:airline_theme='dark'
 
