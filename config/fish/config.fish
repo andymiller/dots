@@ -7,5 +7,9 @@ function ssh_control_ody
 end
 
 # make anaconda first python
-set PATH /Users/acm/anaconda/bin $PATH
+set PATH /Users/acm/anaconda3/bin $PATH
 
+set PATH /usr/local/bin $PATH
+
+# latexmk
+#set PATH /usr/local/texlive/2018/bin/x86_64-darwin $PATH
